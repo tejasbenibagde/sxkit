@@ -1,0 +1,35 @@
+{
+  "name": "sxkit",
+  "version": "1.0.1",
+  "description": "sxkit: Devouring ui headaches, one byte at a time",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "mocha --require ts-node/register --require tsconfig-paths/register --recursive test/**/*.ts"
+  },
+  "author": "Tejas Benibagde",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/chai": "^4.3.14",
+    "@types/mocha": "^10.0.6",
+    "@types/react": "^18.2.75",
+    "@types/sinon": "^17.0.3",
+    "chai": "^5.1.0",
+    "mocha": "^10.4.0",
+    "rollup": "^4.14.1",
+    "sinon": "^17.0.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.4"
+  },
+  "dependencies": {
+    "@testing-library/react": "^15.0.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
