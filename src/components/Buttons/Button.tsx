@@ -1,6 +1,8 @@
 import * as React from "react";
 
-import { getButtonColor } from "../../utils/colors/generator/Button/buttoncolor";
+import { getButtonColor } from "../../utils/colors/generator/Button/buttonColors";
+import { getButtonSize } from "../../utils/size/generator/Button/buttonSize";
+import { getBorderStyle } from "../../utils/styles/generator/Button/buttonStyles";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "small" | "medium" | "large";
@@ -15,6 +17,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     | "indigo"
     | "purple";
   theme?: "dark" | "light";
+  border?: Boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -22,40 +25,12 @@ const Button: React.FC<ButtonProps> = ({
   size = "medium",
   color = "gray",
   theme = "light",
+  border = false,
   ...rest
 }) => {
-  let buttonSizeClass = {
-    padding: "8px 16px",
-    fontSize: "16px",
-    fontWeight: "500",
-    borderRadius: "6px",
-    cursor: "pointer",
-  };
-  switch (size) {
-    case "small":
-      buttonSizeClass = {
-        padding: "4px 8px",
-        fontSize: "12px",
-        fontWeight: "500",
-        borderRadius: "4px",
-        cursor: "pointer",
-      };
-      break;
-    case "large":
-      buttonSizeClass = {
-        padding: "16px 32px",
-        fontSize: "18px",
-        fontWeight: "500",
-        borderRadius: "8px",
-        cursor: "pointer",
-      };
-      break;
-    default:
-      break;
-  }
-
+  const sizeStyle = getButtonSize(size);
   const styles = getButtonColor(color, theme);
-
+  const borderStyle = border ? getBorderStyle(color, theme) : {};
   const buttonStyles: React.CSSProperties = {
     color: styles.color,
     backgroundColor: styles.backgroundColor,
@@ -63,12 +38,12 @@ const Button: React.FC<ButtonProps> = ({
     border: styles.border ? "1px solid" : "none",
     borderColor: styles.border ? styles.borderColor : "white",
 
-    ...buttonSizeClass,
+    ...borderStyle,
+    ...sizeStyle,
   };
 
   return (
     <button
-      className={`btn ${buttonSizeClass}`}
       style={buttonStyles}
       onMouseEnter={(e) => {
         e.currentTarget.style.backgroundColor = styles.hoverBgColor;
