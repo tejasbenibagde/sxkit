@@ -6,13 +6,11 @@
 
 .sxkit is a versatile collection of reusable React components designed to simplify UI development. It offers a wide range of components with customizable props, empowering developers to swiftly create visually appealing and responsive user interfaces.
 
-
-
-
 You can install SXKit via npm:
-```bash 
+
+```bash
     npm install sxkit
-````
+```
 
 ## Table of Contents
 
@@ -21,10 +19,10 @@ You can install SXKit via npm:
 
 ## UI Components
 
-
 ### Button
- &gt; component for React custom buttons.
- 
+
+&gt; component for React custom buttons.
+
 ```jsx
 import React from "react";
 import { Button, Card, Input } from "sxkit";
@@ -32,7 +30,9 @@ import { Button, Card, Input } from "sxkit";
 const App = () => {
   return (
     <div>
-      <Button color="blue" size="large">Click me</Button>
+      <Button color="blue" size="large">
+        Click me
+      </Button>
       <Card title="Example Card">
         <p>This is an example card component.</p>
       </Card>
@@ -42,7 +42,6 @@ const App = () => {
 };
 
 export default App;
+```
 
 **[`Back to top ⬆️`](#table-of-contents)**
-
-
