@@ -8,6 +8,7 @@ import {
   pink,
   indigo,
   purple,
+  slate,
 } from "../../palette/color";
 
 const getButtonColor = (color: string, theme: string = "dark") => {
@@ -19,7 +20,6 @@ const getButtonColor = (color: string, theme: string = "dark") => {
           color: red.red1,
           hoverBgColor: red.red7,
           hoverColor: red.red1,
-          border: false,
         };
       case "gray":
         return {
@@ -27,7 +27,6 @@ const getButtonColor = (color: string, theme: string = "dark") => {
           color: gray.gray1,
           hoverBgColor: gray.gray7,
           hoverColor: gray.gray1,
-          border: false,
         };
       case "green":
         return {
@@ -35,7 +34,6 @@ const getButtonColor = (color: string, theme: string = "dark") => {
           color: green.green1,
           hoverBgColor: green.green7,
           hoverColor: green.green1,
-          border: false,
         };
       case "blue":
         return {
@@ -43,7 +41,6 @@ const getButtonColor = (color: string, theme: string = "dark") => {
           color: blue.blue1,
           hoverBgColor: blue.blue7,
           hoverColor: blue.blue1,
-          border: false,
         };
       case "orange":
         return {
@@ -51,7 +48,6 @@ const getButtonColor = (color: string, theme: string = "dark") => {
           color: orange.orange1,
           hoverBgColor: orange.orange7,
           hoverColor: orange.orange1,
-          border: false,
         };
       case "yellow":
         return {
@@ -59,7 +55,6 @@ const getButtonColor = (color: string, theme: string = "dark") => {
           color: yellow.yellow1,
           hoverBgColor: yellow.yellow7,
           hoverColor: yellow.yellow1,
-          border: false,
         };
       case "pink":
         return {
@@ -67,7 +62,6 @@ const getButtonColor = (color: string, theme: string = "dark") => {
           color: pink.pink1,
           hoverBgColor: pink.pink7,
           hoverColor: pink.pink1,
-          border: false,
         };
       case "indigo":
         return {
@@ -75,7 +69,6 @@ const getButtonColor = (color: string, theme: string = "dark") => {
           color: indigo.indigo1,
           hoverBgColor: indigo.indigo7,
           hoverColor: indigo.indigo1,
-          border: false,
         };
       case "purple":
         return {
@@ -83,15 +76,13 @@ const getButtonColor = (color: string, theme: string = "dark") => {
           color: purple.purple1,
           hoverBgColor: purple.purple7,
           hoverColor: purple.purple1,
-          border: false,
         };
       default: {
         return {
-          backgroundColor: "#18181b",
-          color: "#ffffff",
-          hoverBgColor: "#18181b",
-          hoverColor: "#ffffff",
-          border: false,
+          backgroundColor: slate.slate8,
+          color: slate.slate1,
+          hoverBgColor: slate.slate0,
+          hoverColor: slate.slate1,
         };
       }
     }
@@ -99,9 +90,9 @@ const getButtonColor = (color: string, theme: string = "dark") => {
     return {
       backgroundColor: gray.gray1,
       color: gray.gray7,
+      border: `1px solid ${gray.gray8}`,
       hoverBgColor: gray.gray3,
       hoverColor: gray.gray8,
-      border: true,
       borderColor: gray.gray5,
     };
   }

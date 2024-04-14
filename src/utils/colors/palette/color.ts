@@ -115,4 +115,17 @@ const pink = {
   pink0: "#831843",
 };
 
-export { gray, red, green, blue, orange, yellow, pink, indigo, purple };
+const slate = {
+  slate1: "#f8fafc",
+  slate2: "#f1f5f9",
+  slate3: "#e2e8f0",
+  slate4: "#cbd5e1",
+  slate5: "#94a3b8",
+  slate6: "#64748b",
+  slate7: "#475569",
+  slate8: "#334155",
+  slate9: "#1e293b",
+  slate0: "#0f172a",
+};
+
+export { gray, red, green, blue, orange, yellow, pink, indigo, purple, slate };

@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { getButtonColor } from "../../utils/colors/generator/Button/buttonColors";
 import { getButtonSize } from "../../utils/size/generator/Button/buttonSize";
-import { getBorderStyle } from "../../utils/styles/generator/Button/buttonStyles";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "small" | "medium" | "large";
@@ -15,9 +14,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     | "yellow"
     | "pink"
     | "indigo"
-    | "purple";
+    | "purple"
+    | "black";
   theme?: "dark" | "light";
-  border?: Boolean;
+  style?: React.CSSProperties;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -25,21 +25,19 @@ const Button: React.FC<ButtonProps> = ({
   size = "medium",
   color = "gray",
   theme = "light",
-  border = false,
+  style,
   ...rest
 }) => {
   const sizeStyle = getButtonSize(size);
   const styles = getButtonColor(color, theme);
-  const borderStyle = border ? getBorderStyle(color, theme) : {};
   const buttonStyles: React.CSSProperties = {
     color: styles.color,
     backgroundColor: styles.backgroundColor,
     transition: "background-color 0.2s",
-    border: styles.border ? "1px solid" : "none",
-    borderColor: styles.border ? styles.borderColor : "white",
+    border: "none",
 
-    ...borderStyle,
     ...sizeStyle,
+    ...style,
   };
 
   return (
