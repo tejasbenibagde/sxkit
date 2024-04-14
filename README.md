@@ -21,7 +21,6 @@ You can install SXKit via npm:
 
 ## UI Components
 
-**[`Back to top ⬆️`](#table-of-contents)**
 
 ### Button
  &gt; component for React custom buttons.
@@ -43,5 +42,7 @@ const App = () => {
 };
 
 export default App;
+
+**[`Back to top ⬆️`](#table-of-contents)**
 
 
