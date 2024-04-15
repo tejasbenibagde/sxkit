@@ -1,18 +1,39 @@
 {
   "name": "sxkit",
-  "version": "1.0.1",
+  "version": "1.0.1-beta",
   "description": "sxkit: Devouring ui headaches, one byte at a time",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "repository": "https://github.com/tejasbenibagde/sxkit",
+  "keywords": [
+    "react",
+    "ui",
+    "component",
+    "library",
+    "design",
+    "user interface",
+    "reusable",
+    "frontend",
+    "development",
+    "web",
+    "toolkit",
+    "styles",
+    "buttons",
+    "modern",
+    "customizable",
+    "theme"
+  ],
   "scripts": {
     "build": "rollup -c",
     "test": "mocha --require ts-node/register --require tsconfig-paths/register --recursive test/**/*.ts"
   },
   "author": "Tejas Benibagde",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
+    "@testing-library/react": "^15.0.2",
+    "@testing-library/react-hooks": "^8.0.1",
     "@types/chai": "^4.3.14",
     "@types/mocha": "^10.0.6",
     "@types/react": "^18.2.75",
@@ -27,8 +48,6 @@
     "typescript": "^5.4.4"
   },
   "dependencies": {
-    "@testing-library/react": "^15.0.0",
-    "@testing-library/react-hooks": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
