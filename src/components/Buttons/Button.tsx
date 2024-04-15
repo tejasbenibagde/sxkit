@@ -1,4 +1,5 @@
 import * as React from "react";
+import ErrorBoundary from "../handlers/ErrorBoundary";
 
 import { getButtonColor } from "../../utils/colors/generator/Button/buttonColors";
 import { getButtonSize } from "../../utils/size/generator/Button/buttonSize";
@@ -18,13 +19,14 @@ const Button: React.FC<ButtonProps> = ({
   style,
   ...rest
 }) => {
-  const sizeStyle = getButtonSize(size);
+  const sizeStyle = React.useMemo(() => getButtonSize(size), [size]);
   const {
     color: colour,
     backgroundColor,
     hoverBgColor,
     hoverColor,
-  } = getButtonColor(color, theme);
+  } = React.useMemo(() => getButtonColor(color, theme), [color, theme]);
+
   const buttonStyles: React.CSSProperties = {
     transition: "background-color 0.25s",
     border: "none",
@@ -37,20 +39,22 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   return (
-    <button
-      style={buttonStyles}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.backgroundColor = hoverBgColor;
-        e.currentTarget.style.color = hoverColor;
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.backgroundColor = backgroundColor;
-        e.currentTarget.style.color = colour;
-      }}
-      {...rest}
-    >
-      {children}
-    </button>
+    <ErrorBoundary>
+      <button
+        style={buttonStyles}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = hoverBgColor;
+          e.currentTarget.style.color = hoverColor;
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = backgroundColor;
+          e.currentTarget.style.color = colour;
+        }}
+        {...rest}
+      >
+        {children}
+      </button>
+    </ErrorBoundary>
   );
 };
 

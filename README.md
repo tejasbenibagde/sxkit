@@ -6,7 +6,7 @@
 
 .sxkit is a versatile collection of reusable React components designed to simplify UI development. It offers a wide range of components with customizable props, empowering developers to swiftly create visually appealing and responsive user interfaces.
 
-You can install SXKit via npm:
+You can install .sxKit via npm:
 
 ```bash
     npm install sxkit
