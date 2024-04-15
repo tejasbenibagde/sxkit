@@ -1,14 +1,10 @@
 import {
-  gray, // not looking good
   red,
   green,
-  blue,
   orange,
-  yellow,
-  pink,
   indigo,
   purple,
-  slate,
+  slate as black,
 } from "../../palette/color";
 
 const getButtonColor = (color: string, theme: string = "dark") => {
@@ -21,13 +17,6 @@ const getButtonColor = (color: string, theme: string = "dark") => {
           hoverBgColor: red.red7,
           hoverColor: red.red1,
         };
-      case "gray":
-        return {
-          backgroundColor: gray.gray5,
-          color: gray.gray1,
-          hoverBgColor: gray.gray7,
-          hoverColor: gray.gray1,
-        };
       case "green":
         return {
           backgroundColor: green.green5,
@@ -35,33 +24,12 @@ const getButtonColor = (color: string, theme: string = "dark") => {
           hoverBgColor: green.green7,
           hoverColor: green.green1,
         };
-      case "blue":
-        return {
-          backgroundColor: blue.blue5,
-          color: blue.blue1,
-          hoverBgColor: blue.blue7,
-          hoverColor: blue.blue1,
-        };
       case "orange":
         return {
           backgroundColor: orange.orange5,
           color: orange.orange1,
           hoverBgColor: orange.orange7,
           hoverColor: orange.orange1,
-        };
-      case "yellow":
-        return {
-          backgroundColor: yellow.yellow5,
-          color: yellow.yellow1,
-          hoverBgColor: yellow.yellow7,
-          hoverColor: yellow.yellow1,
-        };
-      case "pink":
-        return {
-          backgroundColor: pink.pink5,
-          color: pink.pink1,
-          hoverBgColor: pink.pink7,
-          hoverColor: pink.pink1,
         };
       case "indigo":
         return {
@@ -79,21 +47,19 @@ const getButtonColor = (color: string, theme: string = "dark") => {
         };
       default: {
         return {
-          backgroundColor: slate.slate8,
-          color: slate.slate1,
-          hoverBgColor: slate.slate0,
-          hoverColor: slate.slate1,
+          backgroundColor: black.slate8,
+          color: black.slate1,
+          hoverBgColor: black.slate0,
+          hoverColor: black.slate1,
         };
       }
     }
   } else {
     return {
-      backgroundColor: gray.gray1,
-      color: gray.gray7,
-      border: `1px solid ${gray.gray8}`,
-      hoverBgColor: gray.gray3,
-      hoverColor: gray.gray8,
-      borderColor: gray.gray5,
+      backgroundColor: black.slate2,
+      color: black.slate7,
+      hoverBgColor: black.slate4,
+      hoverColor: black.slate8,
     };
   }
 };

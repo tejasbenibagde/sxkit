@@ -25,7 +25,7 @@ You can install SXKit via npm:
 
 ```jsx
 import React from "react";
-import { Button, Card, Input } from "sxkit";
+import { Button } from "sxkit";
 
 const App = () => {
   return (
@@ -33,15 +33,13 @@ const App = () => {
       <Button color="blue" size="large">
         Click me
       </Button>
-      <Card title="Example Card">
-        <p>This is an example card component.</p>
-      </Card>
-      <Input type="text" placeholder="Enter your name" />
     </div>
   );
 };
 
 export default App;
 ```
+
+&gt; Note: Button colors may vary based on the theme applied. If no theme is specified, the default theme (dark) will be used.
 
 **[`Back to top ⬆️`](#table-of-contents)**

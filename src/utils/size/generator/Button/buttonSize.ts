@@ -1,28 +1,28 @@
-const getButtonSize = (size: String): React.CSSProperties => {
+const getButtonSize = (size: string): React.CSSProperties => {
   switch (size) {
     case "small":
       return {
-        padding: "4px 8px",
-        fontSize: "12px",
+        padding: "0.25rem 0.5rem",
+        fontSize: "0.75rem",
         fontWeight: "500",
-        borderRadius: "4px",
+        borderRadius: "0.25rem",
         cursor: "pointer",
       };
     case "large":
       return {
-        padding: "16px 32px",
-        fontSize: "18px",
+        padding: "1rem 2rem",
+        fontSize: "1.125rem",
         fontWeight: "500",
-        borderRadius: "8px",
+        borderRadius: "0.5rem",
         cursor: "pointer",
       };
     default:
       // case for medium
       return {
-        padding: "8px 16px",
-        fontSize: "16px",
+        padding: "0.5rem 1rem",
+        fontSize: "1rem",
         fontWeight: "500",
-        borderRadius: "6px",
+        borderRadius: "0.375rem",
         cursor: "pointer",
       };
   }
