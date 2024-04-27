@@ -8,6 +8,6 @@ export default defineConfig({
     format: "es",
     name: "sxkit",
   },
-  external: ["react", "react-dom"],
+  external: ["react"],
   plugins: [typescript({ tsconfig: "tsconfig.json" })],
 });
