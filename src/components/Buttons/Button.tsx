@@ -1,5 +1,5 @@
 import * as React from "react";
-import ErrorBoundary from "../handlers/ErrorBoundary";
+import ErrorBoundary from "../../handlers/ErrorBoundary";
 
 import { getButtonColor } from "../../utils/colors/generator/Button/buttonColors";
 import { getButtonSize } from "../../utils/size/generator/Button/buttonSize";
