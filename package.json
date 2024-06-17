@@ -1,6 +1,6 @@
 {
   "name": "sxkit",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "sxkit: Devouring ui headaches, one byte at a time",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

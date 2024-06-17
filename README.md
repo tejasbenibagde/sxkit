@@ -16,6 +16,7 @@ You can install .sxkit via npm:
 
 - [UI Components](#ui-components)
   - [Editable Button Variants ](#button)
+  - [Editable Card Components](#card)
 
 ## UI Components
 
