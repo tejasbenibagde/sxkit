@@ -42,4 +42,42 @@ export default App;
 
 &gt; Note: Button colors may vary based on the theme applied. If no theme is specified, the default theme (dark) will be used.
 
+
+### Card
+&gt; Component for React custom cards, including Header, Body, and Footer sub-components.
+
+```jsx
+import React from "react";
+import { Card, Header, Body, Footer } from "sxkit";
+
+const App = () => {
+  return (
+    <div className="app">
+      <Card
+        backgroundImage="https://via.placeholder.com/150"
+        size="large"
+        color="white"
+        variant="primary"
+      >
+        <Header>Daily Mix</Header>
+        <Body>
+          <h1>Frontend Radio</h1>
+          <p>Your daily dose of music</p>
+        </Body>
+        <Footer>Available Soon</Footer>
+      </Card>
+    </div>
+  );
+};
+
+export default App;
+```
+
+&gt; Note: The Card component supports several props to customize its appearance:
++ `backgroundImage` : URL of the background image
++ `size` : Size of the card (`small`, `medium`, `large`)
++ `color` : Text color
++ `variant` : Variant of the card (e.g., `primary`)
+
+
 **[`Back to top ⬆️`](#table-of-contents)**
